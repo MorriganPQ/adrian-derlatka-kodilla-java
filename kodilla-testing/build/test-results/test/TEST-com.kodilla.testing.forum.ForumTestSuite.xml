@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.testing.forum.ForumTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-08-05T22:11:19" hostname="MSIPQ" time="0.002">
+<testsuite name="com.kodilla.testing.forum.ForumTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-08-09T16:48:44" hostname="MSIPQ" time="0.002">
   <properties/>
   <testcase name="testCaseRealName" classname="com.kodilla.testing.forum.ForumTestSuite" time="0.001"/>
   <testcase name="testCaseUsername" classname="com.kodilla.testing.forum.ForumTestSuite" time="0.001"/>
