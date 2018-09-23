@@ -2,6 +2,10 @@
 /build/
 !gradle/wrapper/gradle-wrapper.jar
 
+### Modules ###
+/kodilla-*/build/
+/kodilla-*/out/
+
 ### STS ###
 .apt_generated
 .classpath
