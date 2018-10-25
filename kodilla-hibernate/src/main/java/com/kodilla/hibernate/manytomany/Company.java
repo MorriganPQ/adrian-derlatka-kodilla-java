@@ -5,6 +5,11 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedNativeQuery(
+        name = "Company.findByFirstThreeLettersOfName",
+        query = "SELECT * FROM companies WHERE LEFT(LOWER(company_name), 3) = :COMPANYNAME",
+        resultClass = Company.class
+)
 @Entity
 @Table(name = "companies")
 public class Company {

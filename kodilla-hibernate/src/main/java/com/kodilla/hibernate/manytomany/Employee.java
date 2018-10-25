@@ -5,6 +5,10 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedQuery(
+        name = "Employee.findByLastName",
+        query = "FROM Employee WHERE LOWER(lastName) = :LASTNAME"
+)
 @Entity
 @Table(name = "employees")
 public class Employee {
