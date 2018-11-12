@@ -10,6 +10,10 @@ import java.util.List;
         query = "SELECT * FROM companies WHERE LEFT(LOWER(company_name), 3) = :COMPANYNAME",
         resultClass = Company.class
 )
+@NamedQuery(
+        name = "Company.findByPartialName",
+        query = "FROM Company WHERE LOWER(name) LIKE LOWER(:NAME)"
+)
 @Entity
 @Table(name = "companies")
 public class Company {

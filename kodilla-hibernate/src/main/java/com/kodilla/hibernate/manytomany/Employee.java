@@ -5,10 +5,16 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedQuery(
-        name = "Employee.findByLastName",
-        query = "FROM Employee WHERE LOWER(lastName) = :LASTNAME"
-)
+@NamedQueries({
+        @NamedQuery(
+                name = "Employee.findByLastName",
+                query = "FROM Employee WHERE LOWER(lastName) = :LASTNAME"
+        ),
+        @NamedQuery(
+                name = "Employee.findByPartialName",
+                query = "FROM Employee WHERE LOWER(firstName) LIKE LOWER(:NAME) OR LOWER(lastName) LIKE LOWER(:NAME)"
+        )
+})
 @Entity
 @Table(name = "employees")
 public class Employee {
